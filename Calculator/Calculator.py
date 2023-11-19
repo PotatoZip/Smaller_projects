@@ -5,6 +5,11 @@ import math
 equation_text = ""
 first_part = ""
 
+def create_button(num, lambda_fun):
+    new_button = Button(frame, text = num, width = 5, height = 2, font = 20, command = lambda: lambda_fun(num))
+    return new_button
+
+#Adding functionality for buttons from 0 to 9
 def button(btn):
     global equation_text
     global first_part
@@ -16,6 +21,7 @@ def button(btn):
     first_part += str(btn)
     equation_label.set(equation_text)
 
+#Adding functionality for other buttons
 def result(btn):
     global equation_text
     global first_part
@@ -66,7 +72,8 @@ def result(btn):
             show()
     except:
         pass
-    
+
+#Displaying label text
 def show():
     global first_part
     global equation_text
@@ -75,12 +82,13 @@ def show():
     equation_text = equals
     equation_label.set(equals)
 
+#Reset values
 def clear():
     global equation_text
     equation_text = ""
     equation_label.set("")
     
-
+#Window definement
 window = Tk()
 window.geometry("280x350")
 icon = PhotoImage(file = "1489.png")
@@ -92,54 +100,34 @@ equation_label = StringVar()
 label = Label(window, textvariable = equation_label, width = 35, height = 3, font = ('consolas'), relief = SUNKEN, bd = 5)
 label.pack(side="top", padx = 10, pady = 10)
 
-
 frame = Frame(window)
 frame.pack()
-
-button0 = Button(frame, text = 0, width = 5, height = 2, font = 20, command = lambda: button(0))
-button0.grid(row = 4, column = 0, sticky="nsew")
-button1 = Button(frame, text = 1, width = 5, height = 2, font = 20, command = lambda: button(1))
-button1.grid(row = 3, column = 0, sticky="nsew")
-button2 = Button(frame, text = 2, width = 5, height = 2, font = 20, command = lambda: button(2))
-button2.grid(row = 3, column = 1, sticky="nsew")
-button3 = Button(frame, text = 3, width = 5, height = 2, font = 20, command = lambda: button(3))
-button3.grid(row = 3, column = 2, sticky="nsew")
-button4 = Button(frame, text = 4, width = 5, height = 2, font = 20, command = lambda: button(4))
-button4.grid(row = 2, column = 0, sticky="nsew")
-button5 = Button(frame, text = 5, width = 5, height = 2, font = 20, command = lambda: button(5))
-button5.grid(row = 2, column = 1, sticky="nsew")
-button6 = Button(frame, text = 6, width = 5, height = 2, font = 20, command = lambda: button(6))
-button6.grid(row = 2, column = 2, sticky="nsew")
-button7 = Button(frame, text = 7, width = 5, height = 2, font = 20, command = lambda: button(7))
-button7.grid(row = 1, column = 0, sticky="nsew")
-button8 = Button(frame, text = 8, width = 5, height = 2, font = 20, command = lambda: button(8))
-button8.grid(row = 1, column = 1, sticky="nsew")
-button9 = Button(frame, text = 9, width = 5, height = 2, font = 20, command = lambda: button(9))
-button9.grid(row = 1, column = 2, sticky="nsew")
-button_dot = Button(frame, text = '.', width = 5, height = 2, font = 20, command = lambda: button('.'))
-button_dot.grid(row = 4, column = 1)
-button_equals = Button(frame, text = '=', width = 5, height = 2, font = 20, command = lambda: result('='))
-button_equals.grid(row = 4, column = 2)
-button_clear = Button(frame, text = 'C', width = 5, height = 2, font = 20, command = lambda: result('C'))
-button_clear.grid(row = 0, column = 0)
-button_percent = Button(frame, text = '%', width = 5, height = 2, font = 20, command = lambda: result('%'))
-button_percent.grid(row = 0, column = 1)
-button_root = Button(frame, text = '√', width = 5, height = 2, font = 20, command = lambda: result('√'))
-button_root.grid(row = 0, column = 2)
-button_plus = Button(frame, text = '+', width = 5, height = 2, font = 20, command = lambda: result('+'))
-button_plus.grid(row = 4, column = 3)
-button_minus = Button(frame, text = '-', width = 5, height = 2, font = 20, command = lambda: result('-'))
-button_minus.grid(row = 3, column = 3)
-button_divide = Button(frame, text = '÷', width = 5, height = 2, font = 20, command = lambda: result('÷'))
-button_divide.grid(row = 1, column = 3)
-button_multi = Button(frame, text = 'x', width = 5, height = 2, font = 20, command = lambda: result('x'))
-button_multi.grid(row = 2, column = 3)
-button_plus_minus = Button(frame, text = '+/-', width = 5, height = 2, font = 20, command = lambda: result('+/-'))
-button_plus_minus.grid(row = 0, column = 3)
 
 for i in range(5):
     frame.grid_rowconfigure(i, weight=1)
 for i in range(4):
     frame.grid_columnconfigure(i, weight=1)
+    
+#Create Buttons
+create_button(0, button).grid(row = 4, column = 0, sticky="nsew")
+create_button(1, button).grid(row = 3, column = 0, sticky="nsew")
+create_button(2, button).grid(row = 3, column = 1, sticky="nsew")
+create_button(3, button).grid(row = 3, column = 2, sticky="nsew")
+create_button(4, button).grid(row = 2, column = 0, sticky="nsew")
+create_button(5, button).grid(row = 2, column = 1, sticky="nsew")
+create_button(6, button).grid(row = 2, column = 2, sticky="nsew")
+create_button(7, button).grid(row = 1, column = 0, sticky="nsew")
+create_button(8, button).grid(row = 1, column = 1, sticky="nsew")
+create_button(9, button).grid(row = 1, column = 2, sticky="nsew")
+create_button(".", button).grid(row = 4, column = 1)
+create_button("=", result).grid(row = 4, column = 2)
+create_button("C", result).grid(row = 0, column = 0)
+create_button("%", result).grid(row = 0, column = 1)
+create_button("√", result).grid(row = 0, column = 2)
+create_button("+", result).grid(row = 4, column = 3)
+create_button("-", result).grid(row = 3, column = 3)
+create_button("÷", result).grid(row = 1, column = 3)
+create_button("x", result).grid(row = 2, column = 3)
+create_button("+/-", result).grid(row = 0, column = 3)
 
 window.mainloop()
