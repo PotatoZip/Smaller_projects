@@ -1,29 +1,23 @@
-# Foobar
+# Python Calculator
 
-Foobar is a Python library for dealing with word pluralization.
+A simple Python-based calculator with some graphical interface. This project uses Tkinter library to create the GUI. 
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+To use this project clone the repository and install the required Python library. You can use [pip](https://pip.pypa.io/en/stable/) command by running in your terminal:
 
 ```bash
-pip install foobar
+pip install tk
+```
+Then you can simply run the program by using following command in project directory:
+
+```bash
+python Calculator.py
 ```
 
 ## Usage
 
-```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
+The calculator's GUI is very intuitive and user-friendly. It prevents most of the mistakes that can be made by the user. Simply enter your mathematical expression by pressing buttons like in a standard pocket calculator.
 
 ## Contributing
 
@@ -32,8 +26,10 @@ to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
+## Future development
+- Add science mode
+- make % button more usefull
+
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
-
-Feel free to use it.
+This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/) license, feel free to use it.
