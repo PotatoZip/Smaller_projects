@@ -19,16 +19,17 @@ python Calculator.py
 
 The calculator's GUI is very intuitive and user-friendly. It prevents most of the mistakes that can be made by the user. Simply enter your mathematical expression by pressing buttons like in a standard pocket calculator.
 
+## Future development
+
+- Add science mode
+- make % button more usefull
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
-
-## Future development
-- Add science mode
-- make % button more usefull
 
 ## License
 
