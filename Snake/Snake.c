@@ -159,7 +159,7 @@ void draw_board() {
     printf("\nYour score: %d", score);
 }
 
-fruit_generator() {
+void fruit_generator() {
     srand(time(NULL));
     fruit_x = 1 + rand() % (ROWS - 2);
     fruit_y = 1 + rand() % (COLUMNS - 2);
