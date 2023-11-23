@@ -1,15 +1,11 @@
 ﻿using System;
 
-namespace SCVContract
-{
-    internal class Program
-    {
-
-        static void Main(string[] args)
-        {
-            //Służy tylko do uruchomienia Programu
+//Only for startup program
+namespace SCVContract {
+    internal class Program {
+        static void Main(string[] args) {
             Menu menu = new Menu();
-            menu.Uruchamianie(menu);
+            menu.StartGame(menu);
         }
     }
 }

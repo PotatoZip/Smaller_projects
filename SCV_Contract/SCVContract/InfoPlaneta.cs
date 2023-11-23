@@ -5,17 +5,12 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SCVContract
-{
-    internal class InfoPlaneta
-    {
-        //Funkcja ze słownikami, zawierają informacje o planetach
-        public void InfoKaldir()
-        {
+namespace SCVContract {
+    internal class InfoPlaneta {
+        public void InfoKaldir() {
             Console.Clear();
 
-            Dictionary<string, string> infoKaldir = new Dictionary<string, string>()
-            {
+            Dictionary<string, string> infoKaldir = new Dictionary<string, string>() {
                 {"Planeta:", "Kaldir" },
                 {"Informacje ogólne:", "Lodowa pustynia zamieszkała przez zdziczałe szczepy Mastodontów\n                   Główna stacja przesyłowa dla protoskich transportowców"},
                 {"Cel misji:        ", "Zdobądź rzadką odmianę minerałów zwanymi 'Złotymi złożami'"},

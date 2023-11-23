@@ -6,19 +6,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using static System.Console;
 
-namespace SCVContract
-{
-    internal class Menu
-    {
+namespace SCVContract {
+    internal class Menu {
 
-        Planety planety = new Planety();
+        Planets planets = new Planets();
         //Zapis zapis = new Zapis();
         
-
-        //Okno Menu z wyborem NowaGra/WczytajGrę
-        public void Uruchamianie(Menu menu)
-        {
-            Console.WriteLine(@" $$$$$$\   $$$$$$\  $$\    $$\        $$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ $$$$$$$\   $$$$$$\   $$$$$$\ $$$$$$$$\ 
+        public void StartGame(Menu menu) {
+        Console.WriteLine(@" $$$$$$\   $$$$$$\  $$\    $$\        $$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ $$$$$$$\   $$$$$$\   $$$$$$\ $$$$$$$$\ 
 $$  __$$\ $$  __$$\ $$ |   $$ |      $$  __$$\ $$  __$$\ $$$\  $$ |\__$$  __|$$  __$$\ $$  __$$\ $$  __$$\\__$$  __|
 $$ /  \__|$$ /  \__|$$ |   $$ |      $$ /  \__|$$ /  $$ |$$$$\ $$ |   $$ |   $$ |  $$ |$$ /  $$ |$$ /  \__|  $$ |   
 \$$$$$$\  $$ |      \$$\  $$  |      $$ |      $$ |  $$ |$$ $$\$$ |   $$ |   $$$$$$$  |$$$$$$$$ |$$ |        $$ |   
@@ -30,72 +25,68 @@ $$\   $$ |$$ |  $$\   \$$$  /        $$ |  $$\ $$ |  $$ |$$ |\$$$ |   $$ |   $$ 
 
 
                             ");
-            Console.WriteLine("1. ---> Nowa Gra\n2. ---> Wczytaj Grę");
-            while(true)
-            {
-                try
-                {
-                    string wybor = ReadLine();
-                    if(wybor == "1")
-                    {
-                        menu.NowaGra();
+            Console.WriteLine("[1] ---> New game\n[2] ---> Load game");
+            while(true) {
+                try {
+                    string ans = ReadLine();
+                    if(ans == "1") {
+                        menu.NewGame();
                         break;
                     }
-                    else if(wybor == "2")
-                    {
+                    else if(ans == "2") {
                         //menu.WczytajGre();
-                        Console.WriteLine("Ta opcja zostanie dodana w przyszłości");
+                        Console.WriteLine("Will be added");
                     }
-                    else
-                    {
-                        Console.WriteLine("Błędne dane");
+                    else {
+                        Console.WriteLine("Wrong input");
                     }
                 }
-                catch (Exception ex)
-                {
+                catch (Exception ex) {
                     Console.WriteLine(ex.Message);
                 }
 
             }
-
-
             ReadKey();
         }
 
-
-        //Rozpoczyna NowąGrę
-        public void NowaGra()
-        {
+        public void NewGame() {
             Console.Clear();
-            Console.WriteLine("Uruchamianie systemu w toku...");
+            Console.WriteLine("Launch of the adjutant is underway ...");
             Thread.Sleep(500);
             Console.WriteLine(".");
             Thread.Sleep(2000);
             Console.WriteLine(".");
             Thread.Sleep(2000);
             Console.WriteLine(".");
+            Thread.Sleep(2000);
+            Console.Clear();
+            TypeText("Hello");
             Thread.Sleep(1000);
-            Console.WriteLine("Witaj");
+            TypeText("My name is Colonel and I am your personal adjutant\n");
             Thread.Sleep(1000);
-            Console.WriteLine("Nazywam się Corel i jestem adiutantem przyjmujących nowych rekrutów na stanowisko SCV Worker ");
+            TypeText("You are certainly a new employee of the Mobius Industries hired as an SCV worker\n");
             Thread.Sleep(1000);
-            Console.WriteLine("Jeśli tu jesteś to znaczy, że zaciekawiła cię nasza oferta pracy");
+            TypeText("Your boss entrusts you with 3 missions within your contract after the complition of which you will be paid\n");
             Thread.Sleep(1000);
-            Console.WriteLine("Do wykonania będziesz mieć 3 misje o różnym poziomie zaawansowania");
+            TypeText("You can start whenever you want without any specific order\n");
             Thread.Sleep(1000);
-            Console.WriteLine("Twoim zadaniem będzie udanie się na 3 planety w celu pozyskania surowców jak na dobrego SCV przystało");
-            Thread.Sleep(1000);
-            Console.WriteLine("Powodzenia!!!\n\n\n\n");
-            Thread.Sleep(1000);
-            Console.WriteLine("Instrukcja korzystania z kombinezonu SCV:\n'W' lub 'PageUp' ---> Ruch w górę\n'S' lub 'PageDown' ---> Ruch w dół\n'A' lub 'PageLeft' ---> Ruch w lewo\n'D' lub 'PageRight' ---> Ruch w prawo");
-            Console.WriteLine("\nNaciśnij dowolny przycisk, aby kontynuować");
+            TypeText("GOOD LUCK!!!\n\n");
+            Console.WriteLine("Enter any key to continue...");
+            //Console.WriteLine("Instrukcja korzystania z kombinezonu SCV:\n'W' lub 'PageUp' ---> Ruch w górę\n'S' lub 'PageDown' ---> Ruch w dół\n'A' lub 'PageLeft' ---> Ruch w lewo\n'D' lub 'PageRight' ---> Ruch w prawo");
             Console.ReadKey();
-            planety.WyborPlanety();
+            planets.SelectPlanet();
 
         }
+
+        public void TypeText(string text) {
+            foreach (char c in text) {
+                Console.Write(c);
+                Thread.Sleep(50);
+            }
+            Console.WriteLine();
+        }
         /*
-        public void WczytajGre()
-        {
+        public void WczytajGre() {
             zapis.ZapiszGre();
         }
         */
