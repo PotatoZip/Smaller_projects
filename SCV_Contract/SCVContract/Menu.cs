@@ -11,7 +11,6 @@ namespace SCVContract {
 
         Planets planets = new Planets();
         //Zapis zapis = new Zapis();
-        
         public void StartGame(Menu menu) {
         Console.WriteLine(@" $$$$$$\   $$$$$$\  $$\    $$\        $$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ $$$$$$$\   $$$$$$\   $$$$$$\ $$$$$$$$\ 
 $$  __$$\ $$  __$$\ $$ |   $$ |      $$  __$$\ $$  __$$\ $$$\  $$ |\__$$  __|$$  __$$\ $$  __$$\ $$  __$$\\__$$  __|
@@ -77,7 +76,6 @@ $$\   $$ |$$ |  $$\   \$$$  /        $$ |  $$\ $$ |  $$ |$$ |\$$$ |   $$ |   $$ 
             planets.SelectPlanet();
 
         }
-
         public void TypeText(string text) {
             foreach (char c in text) {
                 Console.Write(c);

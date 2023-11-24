@@ -140,7 +140,7 @@ namespace SCVContract {
                                 }
                             }
                             else {
-                                Console.WriteLine("Błędne dane");
+                                Console.WriteLine("Wrong input!");
                             }
                         }
                         catch (Exception ex) {

@@ -1,6 +1,5 @@
 ﻿using System;
 
-//Only for startup program
 namespace SCVContract {
     internal class Program {
         static void Main(string[] args) {

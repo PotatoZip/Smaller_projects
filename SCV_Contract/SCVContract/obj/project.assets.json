@@ -8,23 +8,23 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Wiktor\\.nuget\\packages\\": {},
+    "C:\\Users\\ziggs\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Smaller_Projects\\SCV_Contract\\SCVContract\\SCV_Contract.csproj",
+      "projectUniqueName": "C:\\Users\\ziggs\\Desktop\\Smaller_Projects\\Smaller_projects\\SCV_Contract\\SCVContract\\SCV_Contract.csproj",
       "projectName": "SCV_Contract",
-      "projectPath": "D:\\Projects\\Smaller_Projects\\SCV_Contract\\SCVContract\\SCV_Contract.csproj",
-      "packagesPath": "C:\\Users\\Wiktor\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Smaller_Projects\\SCV_Contract\\SCVContract\\obj\\",
+      "projectPath": "C:\\Users\\ziggs\\Desktop\\Smaller_Projects\\Smaller_projects\\SCV_Contract\\SCVContract\\SCV_Contract.csproj",
+      "packagesPath": "C:\\Users\\ziggs\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ziggs\\Desktop\\Smaller_Projects\\Smaller_projects\\SCV_Contract\\SCVContract\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Wiktor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ziggs\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,7 +33,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -62,12 +61,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.17, 5.0.17]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

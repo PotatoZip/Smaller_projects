@@ -12,7 +12,7 @@ namespace SCVContract
     {
         private FunkcjeMapy funkcjeMapy;
         private Poruszanie poruszanie;
-        InfoPlaneta infoPlaneta = new InfoPlaneta();
+        PlanetInfo infoPlaneta = new PlanetInfo();
 
        
         public bool Play()

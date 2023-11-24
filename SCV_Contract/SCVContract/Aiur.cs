@@ -6,16 +6,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using static System.Console;
 
-namespace SCVContract
-{
-    internal class Aiur
-    {
+namespace SCVContract {
+    internal class Aiur {
         private FunkcjeMapy funkcjeMapy;
         private Poruszanie poruszanie;
-        InfoPlaneta infoPlaneta = new InfoPlaneta();
-
-        public bool Play()
-        {
+        PlanetInfo infoPlaneta = new PlanetInfo();
+        public bool Play() {
             infoPlaneta.InfoAiur();
 
             string[,] mapa =
