@@ -1,0 +1,14 @@
+C:\Users\ziggs\Desktop\Smaller_Projects\Smaller_projects\SCV_Contract C#_Game\SCVContract\bin\Debug\net6.0\SCV_Contract.exe
+C:\Users\ziggs\Desktop\Smaller_Projects\Smaller_projects\SCV_Contract C#_Game\SCVContract\bin\Debug\net6.0\SCV_Contract.deps.json
+C:\Users\ziggs\Desktop\Smaller_Projects\Smaller_projects\SCV_Contract C#_Game\SCVContract\bin\Debug\net6.0\SCV_Contract.runtimeconfig.json
+C:\Users\ziggs\Desktop\Smaller_Projects\Smaller_projects\SCV_Contract C#_Game\SCVContract\bin\Debug\net6.0\SCV_Contract.dll
+C:\Users\ziggs\Desktop\Smaller_Projects\Smaller_projects\SCV_Contract C#_Game\SCVContract\bin\Debug\net6.0\SCV_Contract.pdb
+C:\Users\ziggs\Desktop\Smaller_Projects\Smaller_projects\SCV_Contract C#_Game\SCVContract\obj\Debug\net6.0\SCV_Contract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ziggs\Desktop\Smaller_Projects\Smaller_projects\SCV_Contract C#_Game\SCVContract\obj\Debug\net6.0\SCV_Contract.AssemblyInfoInputs.cache
+C:\Users\ziggs\Desktop\Smaller_Projects\Smaller_projects\SCV_Contract C#_Game\SCVContract\obj\Debug\net6.0\SCV_Contract.AssemblyInfo.cs
+C:\Users\ziggs\Desktop\Smaller_Projects\Smaller_projects\SCV_Contract C#_Game\SCVContract\obj\Debug\net6.0\SCV_Contract.csproj.CoreCompileInputs.cache
+C:\Users\ziggs\Desktop\Smaller_Projects\Smaller_projects\SCV_Contract C#_Game\SCVContract\obj\Debug\net6.0\SCV_Contract.dll
+C:\Users\ziggs\Desktop\Smaller_Projects\Smaller_projects\SCV_Contract C#_Game\SCVContract\obj\Debug\net6.0\refint\SCV_Contract.dll
+C:\Users\ziggs\Desktop\Smaller_Projects\Smaller_projects\SCV_Contract C#_Game\SCVContract\obj\Debug\net6.0\SCV_Contract.pdb
+C:\Users\ziggs\Desktop\Smaller_Projects\Smaller_projects\SCV_Contract C#_Game\SCVContract\obj\Debug\net6.0\SCV_Contract.genruntimeconfig.cache
+C:\Users\ziggs\Desktop\Smaller_Projects\Smaller_projects\SCV_Contract C#_Game\SCVContract\obj\Debug\net6.0\ref\SCV_Contract.dll
