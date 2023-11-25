@@ -10,7 +10,7 @@ namespace SCVContract {
     internal class Menu {
 
         Planets planets = new Planets();
-        //Zapis zapis = new Zapis();
+        //Save save = new Save();
         public void StartGame(Menu menu) {
         Console.WriteLine(@" $$$$$$\   $$$$$$\  $$\    $$\        $$$$$$\   $$$$$$\  $$\   $$\ $$$$$$$$\ $$$$$$$\   $$$$$$\   $$$$$$\ $$$$$$$$\ 
 $$  __$$\ $$  __$$\ $$ |   $$ |      $$  __$$\ $$  __$$\ $$$\  $$ |\__$$  __|$$  __$$\ $$  __$$\ $$  __$$\\__$$  __|
@@ -33,7 +33,7 @@ $$\   $$ |$$ |  $$\   \$$$  /        $$ |  $$\ $$ |  $$ |$$ |\$$$ |   $$ |   $$ 
                         break;
                     }
                     else if(ans == "2") {
-                        //menu.WczytajGre();
+                        //menu.LoadGame();
                         Console.WriteLine("Will be added");
                     }
                     else {
@@ -59,7 +59,7 @@ $$\   $$ |$$ |  $$\   \$$$  /        $$ |  $$\ $$ |  $$ |$$ |\$$$ |   $$ |   $$ 
             Console.WriteLine(".");
             Thread.Sleep(2000);
             Console.Clear();
-            TypeText("Hello");
+            TypeText("Hello\n");
             Thread.Sleep(1000);
             TypeText("My name is Colonel and I am your personal adjutant\n");
             Thread.Sleep(1000);
@@ -84,8 +84,8 @@ $$\   $$ |$$ |  $$\   \$$$  /        $$ |  $$\ $$ |  $$ |$$ |\$$$ |   $$ |   $$ 
             Console.WriteLine();
         }
         /*
-        public void WczytajGre() {
-            zapis.ZapiszGre();
+        public void LoadGame() {
+            save.SaveGame();
         }
         */
     }

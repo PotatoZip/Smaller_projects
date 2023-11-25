@@ -8,11 +8,11 @@ using static System.Console;
 
 namespace SCVContract {
     internal class Aiur {
-        private FunkcjeMapy funkcjeMapy;
-        private Poruszanie poruszanie;
-        PlanetInfo infoPlaneta = new PlanetInfo();
+        private MapProperties mapFunc;
+        private Movement movement;
+        PlanetInfo planetInfo = new PlanetInfo();
         public bool Play() {
-            infoPlaneta.InfoAiur();
+            planetInfo.InfoAiur();
 
             string[,] mapa =
             {
@@ -51,140 +51,109 @@ namespace SCVContract {
 
             };
 
-            funkcjeMapy = new FunkcjeMapy(mapa);
-            poruszanie = new Poruszanie(2, 2);
+            mapFunc = new MapProperties(mapa);
+            movement = new Movement(2, 2);
 
-            return Petla();
-
+            return Loop();
         }
-
-        private bool Petla()
-        {
+        private bool Loop() {
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
-            while (true)
-            {
-
-                if (watch.ElapsedMilliseconds > 1200000000)
-                {
+            while (true) {
+                if (watch.ElapsedMilliseconds > 1200000000) {
                     return false;
                 }
                 Clear();
-                funkcjeMapy.Rysuj();
-                poruszanie.Rysuj();
+                mapFunc.Draw();
+                movement.Draw();
 
                 ConsoleKeyInfo keyInfo = ReadKey(true);
                 ConsoleKey key = keyInfo.Key;
-                switch (key)
-                {
+                switch (key) {
                     case ConsoleKey.UpArrow:
-                        if (funkcjeMapy.czyWolnoIsc(poruszanie.X, poruszanie.Y - 2))
-                        {
-                            poruszanie.Y -= 2;
+                        if (mapFunc.CanGo(movement.X, movement.Y - 2)) {
+                            movement.Y -= 2;
                         }
-                        else
-                        {
-                            if (funkcjeMapy.czyWolnoIsc(poruszanie.X, poruszanie.Y - 1) && (funkcjeMapy.czyWolnoIsc(poruszanie.X, poruszanie.Y - 2) == false))
-                            {
-                                poruszanie.Y -= 1;
+                        else {
+                            if (mapFunc.CanGo(movement.X, movement.Y - 1) && (mapFunc.CanGo(movement.X, movement.Y - 2) == false)) {
+                                movement.Y -= 1;
                             }
                             break;
                         }
                         break;
                     case ConsoleKey.W:
-                        if (funkcjeMapy.czyWolnoIsc(poruszanie.X, poruszanie.Y - 2))
-                        {
-                            poruszanie.Y -= 2;
+                        if (mapFunc.CanGo(movement.X, movement.Y - 2)) {
+                            movement.Y -= 2;
                         }
-                        else
-                        {
-                            if (funkcjeMapy.czyWolnoIsc(poruszanie.X, poruszanie.Y - 1) && (funkcjeMapy.czyWolnoIsc(poruszanie.X, poruszanie.Y - 2) == false))
-                            {
-                                poruszanie.Y -= 1;
+                        else {
+                            if (mapFunc.CanGo(movement.X, movement.Y - 1) && (mapFunc.CanGo(movement.X, movement.Y - 2) == false)) {
+                                movement.Y -= 1;
                             }
                             break;
                         }
                         break;
                     case ConsoleKey.DownArrow:
-                        if (funkcjeMapy.czyWolnoIsc(poruszanie.X, poruszanie.Y + 2))
-                        {
-                            poruszanie.Y += 2;
+                        if (mapFunc.CanGo(movement.X, movement.Y + 2)) {
+                            movement.Y += 2;
                         }
-                        else
-                        {
-                            if (funkcjeMapy.czyWolnoIsc(poruszanie.X, poruszanie.Y + 1) && (funkcjeMapy.czyWolnoIsc(poruszanie.X, poruszanie.Y + 2) == false))
-                            {
-                                poruszanie.Y += 1;
+                        else {
+                            if (mapFunc.CanGo(movement.X, movement.Y + 1) && (mapFunc.CanGo(movement.X, movement.Y + 2) == false)) {
+                                movement.Y += 1;
                             }
                             break;
                         }
                         break;
                     case ConsoleKey.S:
-                        if (funkcjeMapy.czyWolnoIsc(poruszanie.X, poruszanie.Y + 2))
-                        {
-                            poruszanie.Y += 2;
+                        if (mapFunc.CanGo(movement.X, movement.Y + 2)) {
+                            movement.Y += 2;
                         }
-                        else
-                        {
-                            if (funkcjeMapy.czyWolnoIsc(poruszanie.X, poruszanie.Y + 1) && (funkcjeMapy.czyWolnoIsc(poruszanie.X, poruszanie.Y + 2) == false))
-                            {
-                                poruszanie.Y += 1;
+                        else {
+                            if (mapFunc.CanGo(movement.X, movement.Y + 1) && (mapFunc.CanGo(movement.X, movement.Y + 2) == false)) {
+                                movement.Y += 1;
                             }
                             break;
                         }
                         break;
                     case ConsoleKey.LeftArrow:
-                        if (funkcjeMapy.czyWolnoIsc(poruszanie.X - 2, poruszanie.Y))
-                        {
-                            poruszanie.X -= 2;
+                        if (mapFunc.CanGo(movement.X - 2, movement.Y)) {
+                            movement.X -= 2;
                         }
-                        else
-                        {
-                            if (funkcjeMapy.czyWolnoIsc(poruszanie.X - 1, poruszanie.Y) && (funkcjeMapy.czyWolnoIsc(poruszanie.X - 2, poruszanie.Y) == false))
-                            {
-                                poruszanie.X -= 1;
+                        else {
+                            if (mapFunc.CanGo(movement.X - 1, movement.Y) && (mapFunc.CanGo(movement.X - 2, movement.Y) == false)) {
+                                movement.X -= 1;
                             }
                             break;
                         }
                         break;
                     case ConsoleKey.A:
-                        if (funkcjeMapy.czyWolnoIsc(poruszanie.X - 2, poruszanie.Y))
-                        {
-                            poruszanie.X -= 2;
+                        if (mapFunc.CanGo(movement.X - 2, movement.Y)) {
+                            movement.X -= 2;
                         }
-                        else
-                        {
-                            if (funkcjeMapy.czyWolnoIsc(poruszanie.X - 1, poruszanie.Y) && (funkcjeMapy.czyWolnoIsc(poruszanie.X - 2, poruszanie.Y) == false))
-                            {
-                                poruszanie.X -= 1;
+                        else {
+                            if (mapFunc.CanGo(movement.X - 1, movement.Y) && (mapFunc.CanGo(movement.X - 2, movement.Y) == false)) {
+                                movement.X -= 1;
                             }
                             break;
                         }
                         break;
                     case ConsoleKey.RightArrow:
-                        if (funkcjeMapy.czyWolnoIsc(poruszanie.X + 2, poruszanie.Y))
-                        {
-                            poruszanie.X += 2;
+                        if (mapFunc.CanGo(movement.X + 2, movement.Y)) {
+                            movement.X += 2;
                         }
-                        else
-                        {
-                            if (funkcjeMapy.czyWolnoIsc(poruszanie.X + 1, poruszanie.Y) && (funkcjeMapy.czyWolnoIsc(poruszanie.X + 2, poruszanie.Y) == false))
-                            {
-                                poruszanie.X += 1;
+                        else {
+                            if (mapFunc.CanGo(movement.X + 1, movement.Y) && (mapFunc.CanGo(movement.X + 2, movement.Y) == false)) {
+                                movement.X += 1;
                             }
                             break;
                         }
                         break;
                     case ConsoleKey.D:
-                        if (funkcjeMapy.czyWolnoIsc(poruszanie.X + 2, poruszanie.Y))
-                        {
-                            poruszanie.X += 2;
+                        if (mapFunc.CanGo(movement.X + 2, movement.Y)) {
+                            movement.X += 2;
                         }
-                        else
-                        {
-                            if (funkcjeMapy.czyWolnoIsc(poruszanie.X + 1, poruszanie.Y) && (funkcjeMapy.czyWolnoIsc(poruszanie.X + 2, poruszanie.Y) == false))
-                            {
-                                poruszanie.X += 1;
+                        else {
+                            if (mapFunc.CanGo(movement.X + 1, movement.Y) && (mapFunc.CanGo(movement.X + 2, movement.Y) == false)) {
+                                movement.X += 1;
                             }
                             break;
                         }
@@ -193,16 +162,13 @@ namespace SCVContract {
                         break;
                 };
 
-                string koordynatySCV = funkcjeMapy.Koordynaty(poruszanie.X, poruszanie.Y);
-                if (koordynatySCV == "*")
-                {
+                string coordsSCV = mapFunc.Coords(movement.X, movement.Y);
+                if (coordsSCV == "*") {
                     break;
                 }
                 Thread.Sleep(30);
-
             }
             return true;
         }
-
     }
 }

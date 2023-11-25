@@ -5,26 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
 
-namespace SCVContract
-{
-    internal class Poruszanie
-    {
-        //Klasa do ustawiania i rysowania SCV
+namespace SCVContract {
+    internal class Movement {
         public int X { get; set; }
         public int Y { get; set; }
         private string symbolSCV;
-        private ConsoleColor KolorSCV;
-        public Poruszanie(int startoweX, int startoweY)
-        {
-            X = startoweX;
-            Y = startoweY;
+        private ConsoleColor ColorSCV;
+        public Movement(int startX, int startY) {
+            X = startX;
+            Y = startY;
             symbolSCV = "¤";
-            KolorSCV = ConsoleColor.Blue;
+            ColorSCV = ConsoleColor.Blue;
         }
-
-        public void Rysuj()
-        {
-            ForegroundColor = KolorSCV;
+        public void Draw() {
+            ForegroundColor = ColorSCV;
             SetCursorPosition(X, Y);
             Write(symbolSCV);
             ResetColor();

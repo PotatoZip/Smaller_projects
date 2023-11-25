@@ -25,13 +25,13 @@ namespace SCVContract {
                 Console.Clear();
 
                 if (missionsList.Count == 0) {
-                    menu.TypeText("All of your missions have been completed");
+                    menu.TypeText("All of your missions have been completed\n");
                     Thread.Sleep(1000);
-                    menu.TypeText("Credits will be send to your account!!!");
+                    menu.TypeText("Credits will be send to your account!!!\n");
                     Thread.Sleep(1000);
-                    menu.TypeText("We wish we will meet again some sunny day");
+                    menu.TypeText("We wish we will meet again some sunny day\n");
                     Thread.Sleep(2000);
-                        menu.TypeText("... or not");
+                    menu.TypeText("... or not");
                     break;
                 }
 

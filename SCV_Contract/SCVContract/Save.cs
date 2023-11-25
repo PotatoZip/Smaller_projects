@@ -6,26 +6,17 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Text.Json;
 
-namespace SCVContract
-{
-    internal class Zapis
-    {
-        //Tutaj miał być zapis ale nie wyszło ehh
-        
+namespace SCVContract {
+    internal class Save {
         
         private bool boolChar;
         private bool boolKaldir;
         private bool boolAiur;
-        
-        public void WczytajGre()
-        {
+        public void LoadGame(){
 
         }
-        
-        public void ZapiszGre()
-        {
+        public void SaveGame() {
             
         }
-
     }
 }
