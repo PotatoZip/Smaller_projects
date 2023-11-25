@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "RSMOinWO0+tfyDpK12GoIhUdtM/oiMctNvSb5wPHy0OEyqBvi8mSfCGvgiQD3iohmOssCRwrX6aQqgHVcbSVMA==",
+  "dgSpecHash": "1Gv+I1vRcJ0jX/1FZKWBck/KlD/q8nXbmMWA7VlDNAl7B0GL6cgN7HfwNMYx71P/4+Lf4cki5pDPcykGQsMfbg==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Smaller_projects\\SCV_Contract\\SCVContract\\SCV_Contract.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\ziggs\\Desktop\\Smaller_Projects\\Smaller_projects\\SCV_Contract C#_Game\\SCVContract\\SCV_Contract.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ziggs\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\ziggs\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\ziggs\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\ziggs\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
   "logs": []
 }
