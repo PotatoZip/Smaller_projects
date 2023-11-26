@@ -43,7 +43,6 @@ $$\   $$ |$$ |  $$\   \$$$  /        $$ |  $$\ $$ |  $$ |$$ |\$$$ |   $$ |   $$ 
                 catch (Exception ex) {
                     Console.WriteLine(ex.Message);
                 }
-
             }
             ReadKey();
         }
@@ -71,10 +70,9 @@ $$\   $$ |$$ |  $$\   \$$$  /        $$ |  $$\ $$ |  $$ |$$ |\$$$ |   $$ |   $$ 
             Thread.Sleep(1000);
             TypeText("GOOD LUCK!!!\n\n");
             Console.WriteLine("Enter any key to continue...");
-            //Console.WriteLine("Instrukcja korzystania z kombinezonu SCV:\n'W' lub 'PageUp' ---> Ruch w górę\n'S' lub 'PageDown' ---> Ruch w dół\n'A' lub 'PageLeft' ---> Ruch w lewo\n'D' lub 'PageRight' ---> Ruch w prawo");
+  
             Console.ReadKey();
             planets.SelectPlanet();
-
         }
         public void TypeText(string text) {
             foreach (char c in text) {

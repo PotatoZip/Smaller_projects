@@ -6,11 +6,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using static System.Console;
 using System.Diagnostics;
+using SCV_Contract;
 
 namespace SCVContract {
     internal class Kaldir {
         private MapProperties mapFunc;
         private Movement movement;
+        private ConsoleKeyInfo keyInfo;
         PlanetInfo planetInfo = new PlanetInfo();
         public bool Play() {
             planetInfo.InfoKaldir();
@@ -49,48 +51,45 @@ namespace SCVContract {
                 if(watch.ElapsedMilliseconds > 60000) {
                     return false;
                 }
+                Thread.Sleep(30);
+                ProcessInput();
+                
+                string coordsSCV = mapFunc.Coords(movement.X, movement.Y);
+                if (coordsSCV == "*"){
+                    break;
+                }
                 Clear();
                 mapFunc.Draw();
                 movement.Draw();
-
-                ConsoleKeyInfo keyInfo = ReadKey(true);
+                Console.WriteLine("\n{0} [s]", (watch.ElapsedMilliseconds)/1000);
+            }
+            return true;
+        }
+        private void ProcessInput() {
+            if (Console.KeyAvailable) {
+                keyInfo = ReadKey(true);
                 ConsoleKey key = keyInfo.Key;
+
                 switch (key) {
                     case ConsoleKey.UpArrow:
-                        if(mapFunc.CanGo(movement.X, movement.Y - 1)) {
-                            movement.Y -= 1;
-                        }
-                        break;
                     case ConsoleKey.W:
                         if (mapFunc.CanGo(movement.X, movement.Y - 1)) {
                             movement.Y -= 1;
                         }
                         break;
                     case ConsoleKey.DownArrow:
-                        if (mapFunc.CanGo(movement.X, movement.Y + 1)) {
-                            movement.Y += 1;
-                        }
-                        break;
                     case ConsoleKey.S:
                         if (mapFunc.CanGo(movement.X, movement.Y + 1)) {
                             movement.Y += 1;
                         }
                         break;
                     case ConsoleKey.LeftArrow:
-                        if (mapFunc.CanGo(movement.X -1, movement.Y)) {
-                            movement.X -= 1;
-                        }
-                        break;
                     case ConsoleKey.A:
                         if (mapFunc.CanGo(movement.X - 1, movement.Y)) {
                             movement.X -= 1;
                         }
                         break;
                     case ConsoleKey.RightArrow:
-                        if (mapFunc.CanGo(movement.X + 1, movement.Y)) {
-                            movement.X += 1;
-                        }
-                        break;
                     case ConsoleKey.D:
                         if (mapFunc.CanGo(movement.X + 1, movement.Y)) {
                             movement.X += 1;
@@ -98,15 +97,8 @@ namespace SCVContract {
                         break;
                     default:
                         break;
-                };
-                
-                string coordsSCV = mapFunc.Coords(movement.X, movement.Y);
-                if (coordsSCV == "*"){
-                    break;
                 }
-                Thread.Sleep(30);
             }
-            return true;
         }
     }
 }

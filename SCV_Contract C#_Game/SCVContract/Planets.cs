@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -21,7 +24,7 @@ namespace SCVContract {
                 "Aiur",
             };
 
-            while(true) {            
+            while (true) {            
                 Console.Clear();
 
                 if (missionsList.Count == 0) {
@@ -64,7 +67,7 @@ namespace SCVContract {
                 Console.WriteLine("[1] ---> Char\n[2] ---> Kaldir\n[3] ---> Aiur");
 
                 while (true) {
-                        try {
+                    try {
                             string ans = Console.ReadLine();
                             if (ans == "1") {
                                 if (missionsList.Contains("Char")) {
