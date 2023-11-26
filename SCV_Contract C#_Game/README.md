@@ -8,7 +8,7 @@ To use this project clone the repository and run it using .NET environment like 
 
 ## Usage
 
-After start of the game you will have to select if you want to play new game of load it from file (loading is not working at this moment). You can do it by entering "1" into the terminal. After small introduction you will be asked to select one of 3 missions: Kaldir Char or Aiur, you can select them by entering "1", "2" or "3" into terminal. Before every mission you will be informed about your objective and how you can move. If you managed to do all missions the closing credits will be displayed.
+After start of the game you will have to select if you want to play new game of load it from file (loading is not working at this moment). You can do it by entering "1" into the terminal. After small introduction you will be asked to select one of 3 missions: Kaldir Char or Aiur, you can select them by entering "1", "2" or "3" into terminal. Before every mission you will be informed about your objective and how you can move. If you complete all missions the closing credits will be displayed.
 
 Although the user interface is quite basic it prevents most of inappropriate actions.
 
