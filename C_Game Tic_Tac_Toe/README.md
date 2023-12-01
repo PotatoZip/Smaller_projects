@@ -7,7 +7,7 @@ This is a simple console-based Tic-Tac-Toe game implemented in C. The game has s
 To use this project clone the repository and compile the code using:
 
 ```bash
-gcc -o Tic_tac_toe Tic_tac_toe.c
+gcc Tic_tac_toe -o Tic_tac_toe.c
 ```
 Then you can simply run the program by using following command in project directory:
 
